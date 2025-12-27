@@ -10,4 +10,18 @@ const viewStats = () => {
 
 }
 
-module.exports = {gameStats, viewStats};
+const playRound = () => {
+    const userChoice = prompt('Choose rock, paper, or scissors')
+    let cleaned = userChoice.trim().toLowerCase();
+
+    let playTools = ["rock", "paper", "scissors"];
+     if (!playTools.includes(cleaned)){
+        console.log('Please choose valid choice!')
+        return;
+     } else if (playTools.includes(cleaned)){
+        return cleaned;
+     }
+
+}
+
+module.exports = {gameStats, viewStats, playRound};
