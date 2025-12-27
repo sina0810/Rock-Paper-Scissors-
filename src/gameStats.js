@@ -24,4 +24,11 @@ const playRound = () => {
 
 }
 
-module.exports = {gameStats, viewStats, playRound};
+const computerChoice = () => {
+    const computerOnlyChoice = ["rock", "paper", "scissors"];
+    const randomChoice = Math.floor(Math.random() * computerOnlyChoice.length)
+    return computerOnlyChoice [randomChoice];
+}
+console.log(computerChoice());
+
+module.exports = {gameStats, viewStats, playRound, computerChoice};

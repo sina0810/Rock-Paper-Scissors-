@@ -15,7 +15,7 @@ const showMenu = () => {
 
     if (choice === "1") {
       console.log("You chose option 1");
-      playRound();
+      return;
     } else if (choice === "2") {
       viewStats();
     } else if (choice === "3") {
