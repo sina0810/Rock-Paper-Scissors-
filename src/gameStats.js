@@ -52,17 +52,21 @@ const roundWinner = (playRound , computerChoice ) => {
         gameStats.wins++;
         return `Paper beats rock! You win!`
     } 
-        gameStats.losses++;
+        
         
   if (computerChoice === "rock" && playRound === "scissors") {
+    gameStats.losses++;
     return "Rock beats scissors! Computer wins!";
   }
 
   if (computerChoice === "scissors" && playRound === "paper") {
+    gameStats.losses++;
     return "Scissors beats paper! Computer wins!";
-  }
+  } if (computerChoice === "paper" && playRound === "rock"){
+    gameStats.losses++;
+    return "Paper beats rock! Computer wins!";
 
-  return "Paper beats rock! Computer wins!";
+  }
 };  
 
 module.exports = {gameStats, viewStats, playRound, computerChoice, roundWinner};
